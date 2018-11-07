@@ -1,0 +1,45 @@
+<form>
+  <div>
+    <div *ngFor="let check of checkboxes; let i=index">
+      <div *ngIf="i==0">
+      <input  type="checkbox" checked="check"   (change)="toggleVisibility($event)"/>{{check.name}}
+    </div>
+    <div *ngIf="i!=0">
+        <input type="checkbox"  (change)="toggleVisibility($event)"/>{{check.name}}
+      </div>
+    </div>
+  </div>
+  <div>
+    <label>CUSTOMER</label>
+    <div *ngFor="let check of checkboxes; let i=index">
+        <div *ngIf="i!=0">
+            <input name="check" type="checkbox" checked="check"   (change)="toggleVisibility($event)"/>{{check.name}}
+          </div>
+          <div *ngIf="i==0">
+              <input type="checkbox"  (change)="toggleVisibility($event)" />{{check.name}}
+            </div>
+    </div>
+  </div>
+  <div>
+      <label>EMPLOYEE</label>
+      <div *ngFor="let check of checkboxes; let i=index">
+          <div *ngIf="i!=1">
+              <input name="check" type="checkbox" checked="check"    (change)="toggleVisibility($event)"/>{{check.name}}
+            </div>
+            <div *ngIf="i==1">
+                <input type="checkbox"  (change)="toggleVisibility($event)"/>{{check.name}}
+              </div>
+      </div>
+    </div>
+    <div>
+        <label>USER</label>
+        <div *ngFor="let check of checkboxes; let i=index">
+            <div *ngIf="i!=2">
+                <input name="check" type="checkbox" checked="check"   (change)="toggleVisibility($event)"/>{{check.name}}
+              </div>
+              <div *ngIf="i==2">
+                  <input type="checkbox" (change)="toggleVisibility($event)" />{{check.name}}
+                </div>
+        </div>
+      </div>
+</form>
