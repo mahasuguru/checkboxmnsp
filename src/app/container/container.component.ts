@@ -6,24 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit {
-  marked = 'trues';
-  theCheckbox = false;
+  marked = 'true';
+ 
   constructor() { }
 
   ngOnInit() {
   }
 checkboxes=[
   {
-    "name":"ADD",
-    "theCheckbox": "false"
+    "name":"ADD", 
   },
   {
     "name":"EDIT",
-    "theCheckbox": "true"
   },
   {
     "name":"VIEW",
-    "theCheckbox": "true"
   }
 ];
 toggleVisibility(e){
